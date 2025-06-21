@@ -5,20 +5,20 @@
 class CrossplaneDocs < Formula
   desc "XDocs generator for Crossplane"
   homepage "https://github.com/Kavinraja-G/crossplane-docs/"
-  version "0.1.5"
+  version "0.1.6"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Kavinraja-G/crossplane-docs/releases/download/v0.1.5/crossplane-docs_v0.1.5_darwin_amd64.tar.gz"
-      sha256 "474a7d5bd19ef9634dfb3ce03a37a04944d38faebc58e295cfbe78e09eb22e2b"
+    on_intel do
+      url "https://github.com/Kavinraja-G/crossplane-docs/releases/download/v0.1.6/crossplane-docs_v0.1.6_darwin_amd64.tar.gz"
+      sha256 "66ea64527a5866eec098dda8256a602a4b3e6d79da0de6f19d3bf9911f1df514"
 
       def install
         bin.install "crossplane-docs"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Kavinraja-G/crossplane-docs/releases/download/v0.1.5/crossplane-docs_v0.1.5_darwin_arm64.tar.gz"
-      sha256 "a77c9b536fd0ddccfa93d5997e46472fe743291b85dc146f7272479f57b7d6d0"
+    on_arm do
+      url "https://github.com/Kavinraja-G/crossplane-docs/releases/download/v0.1.6/crossplane-docs_v0.1.6_darwin_arm64.tar.gz"
+      sha256 "eb37da8853aa7899b7c621bf315dc15b15f9872985f6bdc944524e3e37a3702d"
 
       def install
         bin.install "crossplane-docs"
@@ -27,20 +27,20 @@ class CrossplaneDocs < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
+    on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Kavinraja-G/crossplane-docs/releases/download/v0.1.5/crossplane-docs_v0.1.5_linux_amd64.tar.gz"
-        sha256 "82c6943af7a33ee7b7684c837407ab80304f29b71c88accb127464f0ed1526bb"
+        url "https://github.com/Kavinraja-G/crossplane-docs/releases/download/v0.1.6/crossplane-docs_v0.1.6_linux_amd64.tar.gz"
+        sha256 "75d9be59ffdff2d921d642656a03fdcf133554ca04696a2c818f4bbc3c188f85"
 
         def install
           bin.install "crossplane-docs"
         end
       end
     end
-    if Hardware::CPU.arm?
+    on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Kavinraja-G/crossplane-docs/releases/download/v0.1.5/crossplane-docs_v0.1.5_linux_arm64.tar.gz"
-        sha256 "0a2553ee7c39ec7eea954d9d5519abea5fcb1b97c130d27acf92e823ea5715ea"
+        url "https://github.com/Kavinraja-G/crossplane-docs/releases/download/v0.1.6/crossplane-docs_v0.1.6_linux_arm64.tar.gz"
+        sha256 "96f88046839769ffd044d17f90ee2d18c1474027b126947b5de3c167facd30c0"
 
         def install
           bin.install "crossplane-docs"
